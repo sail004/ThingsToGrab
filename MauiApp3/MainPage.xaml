@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.MainPage"
+             BackgroundColor="#A4B8C8">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            
+            <!-- Заголовок -->
+            <Frame BackgroundColor="#E8C4BC" 
+                   CornerRadius="15" 
+                   HasShadow="True"
+                   Padding="20"
+                   HorizontalOptions="Center">
+                <Label Text="Мои сборы" 
+                       FontSize="36" 
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       HorizontalOptions="Center"/>
+            </Frame>
+
+            <!-- Список предустановленных категорий -->
+            <Frame BackgroundColor="#E8C4BC" 
+                   CornerRadius="15" 
+                   HasShadow="True"
+                   Padding="20"
+                   Margin="0,20,0,0">
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Перед выходом из дома 🏠" 
+                           FontSize="20" 
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           VerticalOptions="Center"
+                           HorizontalOptions="FillAndExpand"/>
+                </HorizontalStackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnListTapped" CommandParameter="Перед выходом из дома"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Frame BackgroundColor="#E8C4BC" 
+                   CornerRadius="15" 
+                   HasShadow="True"
+                   Padding="20">
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="В поездку ✈️" 
+                           FontSize="20" 
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           VerticalOptions="Center"
+                           HorizontalOptions="FillAndExpand"/>
+                </HorizontalStackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnListTapped" CommandParameter="В поездку"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Frame BackgroundColor="#E8C4BC" 
+                   CornerRadius="15" 
+                   HasShadow="True"
+                   Padding="20">
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="На природу 🌲" 
+                           FontSize="20" 
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           VerticalOptions="Center"
+                           HorizontalOptions="FillAndExpand"/>
+                </HorizontalStackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnListTapped" CommandParameter="На природу"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <!-- Пользовательские списки -->
+            <CollectionView x:Name="CustomListsCollection" 
+                          Margin="0,0,0,0"
+                          SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="#E8C4BC" 
+                               CornerRadius="15" 
+                               HasShadow="True"
+                               Padding="20"
+                               Margin="0,0,0,20">
+                            <HorizontalStackLayout Spacing="10">
+                                <Label Text="{Binding Name}" 
+                                       FontSize="20" 
+                                       FontAttributes="Bold"
+                                       TextColor="Black"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="FillAndExpand"/>
+                            </HorizontalStackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnCustomListTapped"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Кнопка создания нового списка -->
+            <Frame BackgroundColor="#6B7F8F" 
+                   CornerRadius="15" 
+                   HasShadow="True"
+                   Padding="20"
+                   Margin="0,20,0,20">
+                <Label Text="Создать новый список" 
+                       FontSize="22" 
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Center"/>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnCreateNewListClicked"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
