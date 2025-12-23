@@ -29,6 +29,7 @@ public static class MauiProgram
 
         // Регистрация сервисов
         builder.Services.AddSingleton<AuthService>();
+        builder.Services.AddScoped<ListSharingService>();
 
         // Регистрация страниц
         builder.Services.AddTransient<LoginPage>();

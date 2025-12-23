@@ -69,6 +69,21 @@
                 </Frame.GestureRecognizers>
             </Frame>
 
+            <!-- Кнопка поделиться списком -->
+            <Frame BackgroundColor="#5D8AA8" 
+                   CornerRadius="15" 
+                   HasShadow="True"
+                   Padding="15">
+                <Label Text="📤 Поделиться списком" 
+                       FontSize="20" 
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Center"/>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnShareListClicked"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+
             <!-- Кнопка сброса галочек -->
             <Frame BackgroundColor="#8B9BA8" 
                    CornerRadius="15" 
