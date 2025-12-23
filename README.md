@@ -1,19 +1,274 @@
-Регистрация / авторизация
-<img width="231" height="503" alt="Screenshot 2025-12-23 at 10 36 45" src="https://github.com/user-attachments/assets/a0f9d7d0-3221-4315-b706-3546bc5e624b" />
-<img width="236" height="508" alt="Screenshot 2025-12-23 at 10 36 16" src="https://github.com/user-attachments/assets/a6f4efbc-a153-4737-8ec2-cf8fa53007c6" />
+# 📦 Мои Сборы - Приложение для управления списками вещей
 
-Получение списка
-<img width="246" height="518" alt="Screenshot 2025-12-23 at 10 41 18" src="https://github.com/user-attachments/assets/41fe8e32-addf-4711-91b6-d9ade4930b08" />
-<img width="249" height="526" alt="Screenshot 2025-12-23 at 10 59 12" src="https://github.com/user-attachments/assets/04c623f8-74fa-4ca0-8f5f-fe70615893b6" />
-<img width="271" height="526" alt="Screenshot 2025-12-23 at 11 01 38" src="https://github.com/user-attachments/assets/05270a78-51be-4279-9e16-93070ccc6c23" />
-<img width="259" height="530" alt="Screenshot 2025-12-23 at 11 01 48" src="https://github.com/user-attachments/assets/266304a8-ed0e-44ac-841a-83f3b6b206c1" />
+Мобильное приложение на .NET MAUI для создания и совместного использования списков вещей для различных случаев (поездки, выход из дома, природа и т.д.)
 
-Поделится списком по имени пользователя
-<img width="268" height="531" alt="Screenshot 2025-12-23 at 10 59 36" src="https://github.com/user-attachments/assets/0cd7a024-b21c-41ea-99ff-ae0c8984084a" />
-<img width="260" height="523" alt="Screenshot 2025-12-23 at 10 59 42" src="https://github.com/user-attachments/assets/df61a056-525e-4d21-8551-d7c80c2f917d" />
+## ✨ Основные возможности
 
-Создание нового списка
-<img width="241" height="521" alt="Screenshot 2025-12-23 at 11 10 33" src="https://github.com/user-attachments/assets/49ef12c1-5cb7-4fde-b859-a99a7dbbdf75" />
-<img width="235" height="515" alt="Screenshot 2025-12-23 at 11 11 03" src="https://github.com/user-attachments/assets/c51d8d4a-fc01-4d85-8bb5-1ddd2c884faa" />
-<img width="235" height="515" alt="Screenshot 2025-12-23 at 11 11 03" src="https://github.com/user-attachments/assets/53433d47-fde7-4954-b783-a5dd499b15cf" />
+- 🔐 **Регистрация и авторизация** пользователей
+- 📝 **Создание списков** с чекбоксами
+- 🤝 **Совместное использование** списков между пользователями
+- 💾 **Локальное хранение** данных
+- ☁️ **Синхронизация** через PostgreSQL
+- 📱 **Готовые шаблоны** списков
+
+---
+
+## 📸 Скриншоты
+
+### 🔐 Регистрация и авторизация
+
+Безопасная система входа с хешированием паролей (BCrypt)
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a6f4efbc-a153-4737-8ec2-cf8fa53007c6" alt="Экран входа" width="300"/>
+  <img src="https://github.com/user-attachments/assets/a0f9d7d0-3221-4315-b706-3546bc5e624b" alt="Экран регистрации" width="300"/>
+</p>
+
+### 📥 Получение расшаренного списка
+
+Введите ID списка, который вам предоставил другой пользователь
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/41fe8e32-addf-4711-91b6-d9ade4930b08" alt="Главный экран" width="250"/>
+  <img src="https://github.com/user-attachments/assets/04c623f8-74fa-4ca0-8f5f-fe70615893b6" alt="Ввод ID списка" width="250"/>
+  <img src="https://github.com/user-attachments/assets/05270a78-51be-4779-9e16-93070ccc6c23" alt="Подтверждение получения" width="250"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/266304a8-ed0e-44ac-841a-83f3b6b206c1" alt="Список добавлен" width="300"/>
+</p>
+
+### 📤 Поделиться списком
+
+Расшарьте свой список с другим пользователем по его имени
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0cd7a024-b21c-41ea-99ff-ae0c8984084a" alt="Ввод имени пользователя" width="300"/>
+  <img src="https://github.com/user-attachments/assets/df61a056-525e-4d21-8551-d7c80c2f917d" alt="Успешное расшаривание" width="300"/>
+</p>
+
+### ➕ Создание нового списка
+
+Создавайте собственные списки и добавляйте в них вещи
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/49ef12c1-5cb7-4fde-b859-a99a7dbbdf75" alt="Создание списка" width="250"/>
+  <img src="https://github.com/user-attachments/assets/c51d8d4a-fc01-4d85-8bb5-1ddd2c884faa" alt="Просмотр списка" width="250"/>
+  <img src="https://github.com/user-attachments/assets/53433d47-fde7-4954-b783-a5dd499b15cf" alt="Добавление вещи" width="250"/>
+</p>
+
+---
+
+## 🛠 Технологии
+
+- **.NET MAUI** - кроссплатформенный фреймворк
+- **PostgreSQL** - база данных для расшаривания
+- **Entity Framework Core** - ORM
+- **BCrypt** - хеширование паролей
+- **Preferences API** - локальное хранение
+
+---
+
+## 🚀 Установка и запуск
+
+### Требования
+
+- .NET 9.0 SDK
+- PostgreSQL 16+
+- Android SDK (для Android)
+- Visual Studio 2022 / Visual Studio Code / JetBrains Rider
+
+### 1. Клонирование репозитория
+
+```bash
+git clone https://github.com/your-username/MauiApp3.git
+cd MauiApp3
+```
+
+### 2. Установка зависимостей
+
+```bash
+dotnet restore
+```
+
+### 3. Настройка PostgreSQL
+
+#### Вариант A: Использование Docker (рекомендуется)
+
+```bash
+docker run -d \
+  --name postgres-maui \
+  -e POSTGRES_PASSWORD=your_password \
+  -e POSTGRES_DB=mauiapp_db \
+  -p 5432:5432 \
+  postgres:16
+```
+
+#### Вариант B: Локальная установка
+
+1. Установите PostgreSQL с [официального сайта](https://www.postgresql.org/download/)
+2. Создайте базу данных:
+
+```sql
+CREATE DATABASE mauiapp_db;
+```
+
+### 4. Настройка строки подключения
+
+Отредактируйте `MauiProgram.cs` и замените строку подключения:
+
+```csharp
+// Для Docker или локального PostgreSQL
+var connectionString = "Host=localhost;Port=5432;Database=mauiapp_db;Username=postgres;Password=your_password;Timeout=30;";
+
+// Для эмулятора Android замените localhost на IP вашего компьютера
+var connectionString = "Host=192.168.1.100;Port=5432;Database=mauiapp_db;Username=postgres;Password=your_password;Timeout=30;";
+```
+
+**Узнать IP вашего компьютера:**
+```bash
+# macOS/Linux
+ifconfig | grep "inet " | grep -v 127.0.0.1
+
+# Windows
+ipconfig
+```
+
+### 5. Создание таблиц в базе данных
+
+Таблицы создаются автоматически при первом запуске приложения благодаря `EnsureCreated()`.
+
+Или вы можете создать их вручную:
+
+```sql
+-- Таблица пользователей
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password_hash TEXT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+-- Таблица расшаренных списков
+CREATE TABLE shared_lists (
+    id SERIAL PRIMARY KEY,
+    list_id VARCHAR(50) NOT NULL,
+    list_name VARCHAR(200) NOT NULL,
+    owner_id INTEGER NOT NULL,
+    list_data TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    FOREIGN KEY (owner_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Таблица доступа к спискам
+CREATE TABLE shared_list_access (
+    id SERIAL PRIMARY KEY,
+    list_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    access_level VARCHAR(20) NOT NULL DEFAULT 'view',
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    FOREIGN KEY (list_id) REFERENCES shared_lists(id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    UNIQUE(list_id, user_id)
+);
+
+-- Индексы
+CREATE INDEX idx_shared_lists_list_id ON shared_lists(list_id);
+CREATE INDEX idx_shared_lists_owner_id ON shared_lists(owner_id);
+CREATE INDEX idx_shared_list_access_user_id ON shared_list_access(user_id);
+```
+
+### 6. Запуск приложения
+
+#### Android
+
+```bash
+dotnet build -t:Run -f net9.0-android
+```
+
+#### iOS
+
+```bash
+dotnet build -t:Run -f net9.0-ios
+```
+
+#### MacCatalyst
+
+```bash
+dotnet build -t:Run -f net9.0-maccatalyst
+```
+
+---
+
+## 📖 Использование
+
+### Первый запуск
+
+1. **Регистрация**: Создайте новый аккаунт с логином (минимум 3 символа) и паролем (минимум 6 символов)
+2. **Вход**: Войдите в приложение
+
+### Работа со списками
+
+#### Готовые шаблоны
+Приложение включает три готовых шаблона:
+- 🏠 Перед выходом из дома
+- ✈️ В поездку
+- 🌲 На природу
+
+#### Создание своего списка
+1. Нажмите **"Создать новый список"**
+2. Введите название
+3. Добавляйте вещи кнопкой **"Добавить вещь"**
+4. Отмечайте собранные вещи чекбоксами
+
+#### Расшаривание списка
+1. Откройте список
+2. Нажмите **"📤 Поделиться списком"**
+3. Введите имя пользователя получателя
+4. Скопируйте **ID списка** и отправьте его получателю
+
+#### Получение расшаренного списка
+1. На главном экране нажмите **"📥 Получить список по ID"**
+2. Введите **ID**, который вам предоставили
+3. Подтвердите добавление списка
+4. Список появится в вашем списке с пометкой "(общий #ID)"
+
+---
+
+## 🗂 Структура проекта
+
+```
+MauiApp3/
+├── Models.cs                 # Модели данных (User, SharedList, ThingItem)
+├── DatabaseContext.cs        # EF Core контекст для PostgreSQL
+├── AuthService.cs            # Сервис авторизации
+├── ListSharingService.cs     # Сервис расшаривания списков
+├── DataService.cs            # Локальное хранилище данных
+├── LoginPage.xaml/cs         # Страница входа
+├── RegisterPage.xaml/cs      # Страница регистрации
+├── MainPage.xaml/cs          # Главная страница со списками
+├── ItemsPage.xaml/cs         # Страница просмотра списка
+├── AppShell.xaml/cs          # Shell навигация
+├── App.xaml/cs               # Точка входа приложения
+└── MauiProgram.cs            # Конфигурация DI и сервисов
+```
+
+---
+
+## 🔒 Безопасность
+
+- Пароли хешируются с использованием **BCrypt**
+- Данные пользователей хранятся в защищенной базе данных
+- Доступ к расшаренным спискам контролируется через таблицу `shared_list_access`
+- Сессии сохраняются локально через `Preferences API`
+
+---
+
+## 🐛 Известные проблемы
+
+- При работе с эмулятором Android необходимо использовать IP адрес компьютера вместо `localhost`
+- Синхронизация изменений в расшаренных списках происходит только при повторном получении списка по ID
+
+---
 
