@@ -6,6 +6,13 @@
     xmlns:local="clr-namespace:MauiApp3"
     Title="MauiApp3">
 
+    <!-- Страница входа (без TabBar) -->
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage" />
+
+    <!-- Главная страница -->
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
