@@ -7,10 +7,15 @@ public partial class ItemsPage : ContentPage
     private string listName;
     private string listId;
     private ObservableCollection<ThingItem> items;
+    private readonly ListSharingService _sharingService;
 
     public ItemsPage(string name, string id = null)
     {
         InitializeComponent();
+        
+        // Получаем сервис через DI
+        _sharingService = Application.Current.Handler.MauiContext.Services.GetService<ListSharingService>();
+        
         listName = name;
         listId = id;
         TitleLabel.Text = listName;
@@ -56,6 +61,79 @@ public partial class ItemsPage : ContentPage
             };
             items.Add(newItem);
             DataService.SaveItems(listName, listId, items);
+        }
+    }
+
+    private async void OnShareListClicked(object sender, EventArgs e)
+    {
+        if (_sharingService == null)
+        {
+            await DisplayAlert("Ошибка", "Сервис расшаривания недоступен", "OK");
+            return;
+        }
+
+        // Проверяем, есть ли items в списке
+        if (items == null || items.Count == 0)
+        {
+            await DisplayAlert("Внимание", "Список пуст. Добавьте хотя бы одну вещь перед расшариванием.", "OK");
+            return;
+        }
+
+        // Запрашиваем username получателя
+        string recipientUsername = await DisplayPromptAsync(
+            "Поделиться списком",
+            "Введите имя пользователя:",
+            "Поделиться",
+            "Отмена",
+            placeholder: "username");
+
+        if (string.IsNullOrWhiteSpace(recipientUsername))
+        {
+            return;
+        }
+
+        // Показываем индикатор загрузки
+        var loadingPage = new ContentPage
+        {
+            Content = new ActivityIndicator
+            {
+                IsRunning = true,
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.Center,
+                Color = Colors.Gray
+            }
+        };
+
+        await Navigation.PushModalAsync(loadingPage);
+
+        try
+        {
+            // Расшариваем список
+            var result = await _sharingService.ShareListAsync(
+                listId,
+                listName,
+                items,
+                recipientUsername);
+
+            await Navigation.PopModalAsync();
+
+            if (result.success)
+            {
+                // Показываем ID списка
+                await DisplayAlert(
+                    "✅ Успешно!",
+                    $"{result.message}\n\nПользователь '{recipientUsername}' может получить список по этому ID.",
+                    "OK");
+            }
+            else
+            {
+                await DisplayAlert("Ошибка", result.message, "OK");
+            }
+        }
+        catch (Exception ex)
+        {
+            await Navigation.PopModalAsync();
+            await DisplayAlert("Ошибка", $"Не удалось поделиться списком: {ex.Message}", "OK");
         }
     }
 
