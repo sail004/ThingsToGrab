@@ -55,7 +55,7 @@
 <p align="center">
   <img src="https://github.com/user-attachments/assets/49ef12c1-5cb7-4fde-b859-a99a7dbbdf75" alt="Создание списка" width="250"/>
   <img src="https://github.com/user-attachments/assets/c51d8d4a-fc01-4d85-8bb5-1ddd2c884faa" alt="Просмотр списка" width="250"/>
-  <img src="https://github.com/user-attachments/assets/53433d47-fde7-4954-b783-a5dd499b15cf" alt="Добавление вещи" width="250"/>
+  <img width="233" height="513" alt="Screenshot 2025-12-23 at 11 11 46" src="https://github.com/user-attachments/assets/9148fce8-e1c1-4e5d-bba0-0982e6f68a1e" />
 </p>
 
 ---
