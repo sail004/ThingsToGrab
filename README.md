@@ -31,7 +31,8 @@
 <p align="center">
   <img src="https://github.com/user-attachments/assets/41fe8e32-addf-4711-91b6-d9ade4930b08" alt="Главный экран" width="250"/>
   <img src="https://github.com/user-attachments/assets/04c623f8-74fa-4ca0-8f5f-fe70615893b6" alt="Ввод ID списка" width="250"/>
-  <img src="https://github.com/user-attachments/assets/05270a78-51be-4779-9e16-93070ccc6c23" alt="Подтверждение получения" width="250"/>
+<img width="260" height="523" alt="Screenshot 2025-12-23 at 10 59 42" src="https://github.com/user-attachments/assets/a4196390-e49f-4691-86bc-7d068aa75738" />
+
 </p>
 
 <p align="center">
